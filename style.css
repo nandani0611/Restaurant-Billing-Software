@@ -1,0 +1,133 @@
+/* ==== GLOBAL ==== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fceabb, #a57b05);
+    color: #222;
+    padding: 40px;
+    margin: auto;
+    max-width: 1100px;
+}
+
+/* ==== HEADINGS ==== */
+h2 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff6f61;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #444;
+    margin-top: 20px;
+}
+
+/* ==== FORM STYLES ==== */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    animation: fadeIn 1s;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 200px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px #ff6f61aa;
+}
+
+/* ==== BUTTONS ==== */
+button {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
+/* ==== TABLE STYLES ==== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+table, th, td {
+    border: none;
+}
+
+th {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* ==== LINKS ==== */
+a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 6px;
+    color: white;
+    background: #6c757d;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+a:hover {
+    background: #343a40;
+}
+
+a[href="/admin/delete"] {
+    background: #dc3545;
+}
+
+a[href="/admin/delete"]:hover {
+    background: #c82333;
+}
+
+/* ==== ANIMATION ==== */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
