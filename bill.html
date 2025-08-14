@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h2>✅ Bill Generated</h2>
+<table>
+    <tr><th>Item</th><th>Qty</th><th>Unit Price</th><th>Total</th></tr>
+    {% for name, qty, price in items %}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{qty}}</td>
+        <td>₹{{price}}</td>
+        <td>₹{{price * qty}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h3>Subtotal: ₹{{subtotal}}</h3>
+<h3>GST (18%): ₹{{gst}}</h3>
+<h2>Total: ₹{{total}}</h2>
+<a href="/">← Back to Order</a>
+</body>
+</html>
