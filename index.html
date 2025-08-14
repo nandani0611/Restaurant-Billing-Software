@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Billing</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<i><h2>🧾 Restaurant Billing</h2></i>
+<form action="/bill" method="post">
+    <label>Customer Type:</label>
+    <select name="cust_type">
+        <option>Dine-In</option>
+        <option>Takeaway</option>
+    </select>
+
+    <label>Payment Method:</label>
+    <select name="payment_method">
+        <option>Cash</option>
+        <option>Card</option>
+        <option>UPI</option>
+    </select>
+
+    <table>
+        <tr><th>Select</th><th>Item</th><th>Price</th><th>Qty</th></tr>
+        {% for item in menu %}
+        <tr>
+            <td><input type="checkbox" name="item" value="{{item[0]}}"></td>
+            <td>{{item[1]}}</td>
+            <td>₹{{item[3]}}</td>
+            <td><input type="number" name="qty" value="1" min="1"></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <button type="submit">Generate Bill</button>
+</form>
+<a href="/admin">🔐 Admin</a>
+</body>
+</html>
